@@ -1,24 +1,24 @@
 # Mesh Toolkit for Unity
 
-The Mesh Toolkit enables creators and developers to build custom 3D environments and experiences to meet specific business needs: new employee onboarding, training, guided tours, social gatherings, and more.This repo contains sample projects that you can use as a starting point for building your custom 3D experiences.  
+The Mesh Toolkit enables creators and developers to build custom 3D environments and experiences to meet specific business needs: new employee onboarding, training, guided tours, social gatherings, and more.This repo contains sample projects that you can use as a starting point for building your custom 3D experiences.
 
-## Getting started: 
+## Getting Started
 
-For detailed instructions on getting started with development for Microsoft Mesh, [visit our documentation at learn.microsoft.com](https://aka.ms/MeshDeveloper). 
+For detailed instructions on getting started with development for Microsoft Mesh, [visit our documentation at learn.microsoft.com](https://aka.ms/MeshDeveloper).
 
 1. [**Mesh 101**](https://aka.ms/Mesh101Tutorial): Start here to learn how to build for Mesh!
 
-    ![A screenshot of the Mesh 101 tutorial showing the sphere terraces and wind turbines.](README/001-mesh-distant-shot.png)
+    ![A screenshot of the Mesh 101 tutorial showing the sphere terraces and wind turbines.](docs/001-mesh-distant-shot.png)
 
 1. **Physics showcase projects**: Get things moving with physics in three example projects: a [dart room](https://aka.ms/MeshDartRoomSample), a [science building](https://aka.ms/MeshScienceBuildingSample), or a [physics effects gallery](https://aka.ms/MeshPhysicsEffectsSample).
 
-    ![A representative view of the DartRoom sample.](README/Dart_Room_Hero.png)
-     ![A representative view of the ScienceBuilding sample.](README/ScienceBuilding_Hero.png)
-    ![An overhead view of the PhysicsEffectsGallery sample.](README/002-physics-gallery.png)
+    ![A representative view of the DartRoom sample.](docs/Dart_Room_Hero.png)
+     ![A representative view of the ScienceBuilding sample.](docs/ScienceBuilding_Hero.png)
+    ![An overhead view of the PhysicsEffectsGallery sample.](docs/002-physics-gallery.png)
 
 1. [**Toybox**](https://aka.ms/MeshToyboxSample): Add games and other engaging activities to Mesh experiences.
 
-    ![A long-range view of the toybox scene in unity showing a building, tent and surrounding lake.](README/toybox_building_02.png)
+    ![A long-range view of the toybox scene in unity showing a building, tent and surrounding lake.](docs/toybox_building_02.png)
 
 **NOTICE**: The samples in this project are governed by the MIT license as shown in the [LICENSE.txt file](LICENSE.txt). However, the samples functionality is dependent on the Mesh Toolkit, which is governed by a separate license.
 

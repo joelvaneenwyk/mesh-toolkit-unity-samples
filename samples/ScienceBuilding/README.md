@@ -1,6 +1,6 @@
 # Microsoft Mesh Toolkit Sample: ScienceBuilding
 
-![ScienceBuilding](README/ScienceBuilding.jpg)
+![ScienceBuilding](docs/ScienceBuilding.jpg)
 
 ## What is ScienceBuilding?
 

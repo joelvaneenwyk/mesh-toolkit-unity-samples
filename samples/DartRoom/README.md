@@ -1,6 +1,6 @@
 # Microsoft Mesh Toolkit Sample: DartRoom
 
-![DartRoom](README/DartRoom.jpg)
+![DartRoom](docs/DartRoom.jpg)
 
 ## What is DartRoom?
 
@@ -17,6 +17,6 @@ In this project, you'll find:
 * **Darts**: You can throw these in the camera direction. They're "sticky," so they'll stay attached to anything they hit.
 * **Globe**: The globe rotates, demonstrating a motored hinge. The globe also has a gravity field which influences small objects entering a spherical trigger volume. Drag some cups close to the globe and watch them rotate around it like satellites.
 
-![DartRoom](README/DartRoom-GravityGlobe.jpg)
+![DartRoom](docs/DartRoom-GravityGlobe.jpg)
 
 This is a carefully designed scene that demonstrates the power of combining appealing visuals with the creative use of Mesh Physics features. Feel free to inspect and modify the scene and play with it!

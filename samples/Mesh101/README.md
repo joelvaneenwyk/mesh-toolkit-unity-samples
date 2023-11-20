@@ -1,6 +1,6 @@
 # Microsoft Mesh Toolkit Sample: Mesh 101
 
-![Chapter 3 and Chapter 4 Sphere Terraces](README/Mesh101.png)
+![Chapter 3 and Chapter 4 Sphere Terraces](docs/Mesh101.png)
 
 ## What is Mesh 101?
 
