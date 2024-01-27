@@ -25,8 +25,54 @@ tasks:
     cmds:
       - '{{if eq .OS "Windows_NT"}}cmd /d /c if exist "{{.TARGET}}" rmdir /q /s "{{.TARGET}}"{{end}}'
 
-  default:
+  prepare-build:
+    internal: true
+    vars:
+      TARGET: '{{default ".build" .TARGET}}'
     cmds:
       - '{{if eq .OS "Windows_NT"}}cmd /d /c if not exist "{{.USER_WORKING_DIR}}\.build" mkdir "{{.USER_WORKING_DIR}}\.build"{{end}}'
-      - dotnet UnityBuildRunner -quit -batchmode -buildTarget "Win64" -projectPath "{{.USER_WORKING_DIR}}/DartRoom" -logfile "{{.USER_WORKING_DIR}}/.build/unity_build.log"
+
+  unity-build:
+    deps: [prepare-build]
+    internal: true
+    vars:
+      PROJECT: '{{default "DartRoom" .PROJECT}}'
+    cmds:
+      - '{{if eq .OS "Windows_NT"}}cmd /d /c if not exist "{{.USER_WORKING_DIR}}\.build" mkdir "{{.USER_WORKING_DIR}}\.build"{{end}}'
+      - dotnet UnityBuildRunner -quit -batchmode -buildTarget "Win64" -projectPath "{{.USER_WORKING_DIR}}/{{.PROJECT}}" -logfile "{{.USER_WORKING_DIR}}/.build/unity_build_{{.PROJECT}}.log"
     silent: false
+
+  unity-build-dart-room:
+    cmds:
+      - task: unity-build
+        vars: { PROJECT: "DartRoom" }
+
+  unity-build-mesh-101:
+    cmds:
+      - task: unity-build
+        vars: { PROJECT: "Mesh101" }
+
+  unity-build-physics-effects-gallery:
+    cmds:
+      - task: unity-build
+        vars: { PROJECT: "PhysicsEffectsGallery" }
+
+  unity-build-science-building:
+    cmds:
+      - task: unity-build
+        vars: { PROJECT: "ScienceBuilding" }
+
+  unity-build-toybox:
+    cmds:
+      - task: unity-build
+        vars: { PROJECT: "Toybox" }
+
+  default:
+    deps:
+      [
+        unity-build-dart-room,
+        unity-build-mesh-101,
+        unity-build-physics-effects-gallery,
+        unity-build-science-building,
+        unity-build-toybox,
+      ]
