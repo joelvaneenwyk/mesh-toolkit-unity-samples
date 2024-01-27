@@ -1,7 +1,22 @@
 {
-    "github.gitProtocol": "ssh",
-    "github-actions.workflows.pinned.refresh.enabled": true,
-    "githubRepositories.indexing.cacheSizeLimit": 500,
-    "isGitignoreExtActive": true,
-    "githubRepositories.autoFetch.interval": 600
+  "files.associations": {
+    "*.*.meta": "yaml",
+    "*.bbmodel": "json",
+    "*.ejs": "html",
+    "*.emu": "html",
+    "*.hbs": "html",
+    "*.rasi": "css",
+    "*.sublime-snippet": "xml",
+    "*.Xresources": "xdefaults",
+    "i3/*.conf": "i3",
+    "i3/config": "i3",
+    "lesskey": "lesskey",
+    "polybar/*.conf": "ini",
+    "polybar/config": "ini"
+  },
+  "github-actions.workflows.pinned.refresh.enabled": true,
+  "github.gitProtocol": "ssh",
+  "githubRepositories.autoFetch.interval": 600,
+  "githubRepositories.indexing.cacheSizeLimit": 500,
+  "isGitignoreExtActive": true
 }
