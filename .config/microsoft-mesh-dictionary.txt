@@ -1,0 +1,6 @@
+# Custom Dictionary Words
+cmds
+Fishin
+msrc
+OCL's
+pkill
