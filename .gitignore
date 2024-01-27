@@ -74,3 +74,7 @@ crashlytics-build.properties
 # Custom
 .backup/
 artifacts/
+.build/
+
+VisualScripting.Flow/
+*.db
