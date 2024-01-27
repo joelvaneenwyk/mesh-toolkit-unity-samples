@@ -8,29 +8,37 @@ vars:
   PY: '{{if eq .OS "Windows_NT"}}py -3{{else}}python3{{end}}'
   PIP: '{{if eq .OS "Windows_NT"}}py -3 -m pip{{else}}pip3{{end}}'
   YARN: "yarn"
-
+  OUTPUT_DIRECTORY: "{{.USER_WORKING_DIR}}/.build"
 env:
   UnityPath: C:\Program Files\Unity\Hub\Editor\2022.3.7f1\Editor\Unity.exe
 
 tasks:
-  kill-python:
+  default:
     cmds:
-      - '{{if eq .OS "Windows_NT"}}powershell -NoProfile -Command Stop-Process -Name python -Force{{else}}pkill -f python{{end}}'
-
-  remove-cache:
-    deps: [kill-python]
-    internal: true
-    vars:
-      TARGET: '{{default ".build" .TARGET}}'
-    cmds:
-      - '{{if eq .OS "Windows_NT"}}cmd /d /c if exist "{{.TARGET}}" rmdir /q /s "{{.TARGET}}"{{end}}'
+      - task: unity-build-all
 
   prepare-build:
     internal: true
-    vars:
-      TARGET: '{{default ".build" .TARGET}}'
     cmds:
-      - '{{if eq .OS "Windows_NT"}}cmd /d /c if not exist "{{.USER_WORKING_DIR}}\.build" mkdir "{{.USER_WORKING_DIR}}\.build"{{end}}'
+      - task: make-directory
+        vars: { TARGET: "{{.OUTPUT_DIRECTORY}}" }
+    silent: true
+
+  unity-build-all-scenes:
+    deps:
+      [
+        unity-build-dart-room,
+        unity-build-mesh-101,
+        unity-build-physics-effects-gallery,
+        unity-build-science-building,
+        unity-build-toybox,
+      ]
+    internal: true
+
+  unity-build-all:
+    deps: [kill-unity]
+    cmds:
+      - task: unity-build-all-scenes
 
   unity-build:
     deps: [prepare-build]
@@ -38,8 +46,7 @@ tasks:
     vars:
       PROJECT: '{{default "DartRoom" .PROJECT}}'
     cmds:
-      - '{{if eq .OS "Windows_NT"}}cmd /d /c if not exist "{{.USER_WORKING_DIR}}\.build" mkdir "{{.USER_WORKING_DIR}}\.build"{{end}}'
-      - dotnet UnityBuildRunner -quit -batchmode -buildTarget "Win64" -projectPath "{{.USER_WORKING_DIR}}/{{.PROJECT}}" -logfile "{{.USER_WORKING_DIR}}/.build/unity_build_{{.PROJECT}}.log"
+      - dotnet UnityBuildRunner -timeout "00:30:00" -quit -batchmode -buildTarget "Win64" -projectPath "{{.USER_WORKING_DIR}}/{{.PROJECT}}" -logfile "{{.OUTPUT_DIRECTORY}}/unity_build_{{.PROJECT}}.log"
     silent: false
 
   unity-build-dart-room:
@@ -67,12 +74,33 @@ tasks:
       - task: unity-build
         vars: { PROJECT: "Toybox" }
 
-  default:
-    deps:
-      [
-        unity-build-dart-room,
-        unity-build-mesh-101,
-        unity-build-physics-effects-gallery,
-        unity-build-science-building,
-        unity-build-toybox,
-      ]
+  #
+  # Internal helper tasks
+  #
+
+  kill-unity:
+    cmds:
+      - task: kill-process
+        vars: { PROJECT: "Unity" }
+
+  kill-process:
+    internal: true
+    vars:
+      TARGET: '{{default "Unity" .TARGET}}'
+    cmds:
+      - cmd: '{{if eq .OS "Windows_NT"}}powershell -NoProfile -Command Stop-Process -ErrorAction SilentlyContinue -Name "{{.TARGET}}" -Force{{else}}pkill -f "{{.TARGET}}"{{end}}'
+        ignore_error: true
+
+  remove-directory:
+    internal: true
+    vars:
+      TARGET: '{{default ".build" .TARGET}}'
+    cmds:
+      - '{{if eq .OS "Windows_NT"}}cmd /d /c if exist "{{.TARGET}}" rmdir /q /s "{{.TARGET}}"{{else}}rm -rf {{.TARGET}}{{end}}'
+
+  make-directory:
+    internal: true
+    vars:
+      TARGET: '{{default "" .TARGET}}'
+    cmds:
+      - '{{if eq .OS "Windows_NT"}}cmd /d /c if not exist "{{.TARGET}}" mkdir "{{.TARGET}}"{{else}}mkdir -p "{{.TARGET}}"{{end}}'
