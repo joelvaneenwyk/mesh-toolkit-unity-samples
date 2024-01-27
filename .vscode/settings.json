@@ -1,0 +1,7 @@
+{
+    "github.gitProtocol": "ssh",
+    "github-actions.workflows.pinned.refresh.enabled": true,
+    "githubRepositories.indexing.cacheSizeLimit": 500,
+    "isGitignoreExtActive": true,
+    "githubRepositories.autoFetch.interval": 600
+}
