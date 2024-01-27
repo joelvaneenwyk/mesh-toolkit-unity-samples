@@ -7,9 +7,7 @@ on:
     branches: [main, develop]
 
 jobs:
-  buildMeshWindows:
-    name: Build for ${{ matrix.targetPlatform }}
-    runs-on: windows-2022
+  build:
     strategy:
       fail-fast: false
       matrix:
@@ -23,11 +21,15 @@ jobs:
           # - tvOS # Build an AppleTV player.
           # - WSAPlayer # Build a UWP App.
 
+    name: Build ${{ matrix.projectPath }} '${{ matrix.targetPlatform }}'
+    runs-on: windows-2022
+
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
           lfs: true
+
       - uses: actions/cache@v3
         with:
           path: ${{ matrix.projectPath }}/Library
@@ -38,7 +40,12 @@ jobs:
             Library-${{ matrix.projectPath }}-${{ matrix.targetPlatform }}-
             Library-${{ matrix.projectPath }}-
             Library-
-      - uses: game-ci/unity-builder@v4
+
+      - name: Unity - Activate
+        uses: game-ci/unity-activate@v2.0.0
+
+      - name: Unity - Builder
+        uses: game-ci/unity-builder@v4
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
           UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
@@ -47,8 +54,3 @@ jobs:
           projectPath: ${{ matrix.projectPath }}
           unityVersion: ${{ matrix.unityVersion }}
           targetPlatform: ${{ matrix.targetPlatform }}
-          customParameters: '-myParameter myValue -myBoolean -ThirdParameter andItsValue'
-      - uses: actions/upload-artifact@v3
-        with:
-          name: Build
-          path: build
