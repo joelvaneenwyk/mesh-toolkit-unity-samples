@@ -17,9 +17,7 @@ jobs:
         unityVersion:
           - 2022.3.7f1
         targetPlatform:
-          - StandaloneWindows64 # Build a Windows 64-bit standalone.
-          # - tvOS # Build an AppleTV player.
-          # - WSAPlayer # Build a UWP App.
+          - StandaloneWindows64
 
     name: Build ${{ matrix.projectPath }} '${{ matrix.targetPlatform }}'
     runs-on: ubuntu-latest
@@ -30,7 +28,7 @@ jobs:
           fetch-depth: 0
           lfs: true
 
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         with:
           path: ${{ matrix.projectPath }}/Library
           key:
