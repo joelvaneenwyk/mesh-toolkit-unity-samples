@@ -14,13 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shouldLockAssemblyReload: 0
   allowedToChangeProjectSettings: 0
-  lastVersionInitialized: 
+  lastVersionInitialized: 1.2315.67
   projectConfigured: 0
   requireGroundCollisionLayer: 0
   useLegacyUnityBuildPipeline: 1
   useStrictMode: 1
   warnBeforeUpload: 1
   destroyUnsupportedComponentsBeforeUpload: 0
-  customHostedBuild: 
-  allowIncompatibleUnityVersion: 0
-  copyBundlesToLocalDirectory: 0

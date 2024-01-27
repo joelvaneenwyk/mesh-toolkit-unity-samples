@@ -75,6 +75,8 @@ crashlytics-build.properties
 .backup/
 artifacts/
 .build/
+.output/
 
-VisualScripting.Flow/
-*.db
+# Mesh
+ConfigurationCache/
+Artifacts/[a-f\d]+/[a-f\d]+
