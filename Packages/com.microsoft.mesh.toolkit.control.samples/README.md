@@ -14,7 +14,7 @@ There are a few ways to add the Control Samples package to your project. You an 
 
     ![Package Manager Add](README~/PackageManagerAdd.png)
 
-1. Paste *https://github.com/microsoft/Mesh-Toolkit-Unity.git?path=/Packages/com.microsoft.mesh.toolkit.control.samples* into the text field and click `"Add"`
+1. Paste <https://github.com/microsoft/Mesh-Toolkit-Unity.git?path=/Packages/com.microsoft.mesh.toolkit.control.samples> into the text field and click `"Add"`
 
     ![Package Manager Paste](README~/PackageManagerPaste.png)
 

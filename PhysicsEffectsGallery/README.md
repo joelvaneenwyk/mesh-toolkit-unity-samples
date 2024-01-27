@@ -10,7 +10,7 @@ In this project, you'll find:
 
 * **Default game physics**: demonstrating shapes, constraints and restitution
 * **Explosions**: configured with different parameters (both spherical and directional)
-* **Velocity fields**: showing diffent options to move objects 
+* **Velocity fields**: showing different options to move objects
 * **Throwing objects**: with ball or dart like behavior
 * **Visual Scripting examples**: for 3D button and slider UI elements
 * **Mass and Gravity**: scaled gravity or objects orbiting around the sun
