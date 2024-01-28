@@ -12397,6 +12397,56 @@ PrefabInstance:
         Animation Once WindTurbine Enters The Trigger","comment":null,"color":{"r":0.0,"g":0.0,"b":0.0,"a":1.0},"guid":"2a60f641-f072-4719-8696-60e51971886d","$version":"A","$type":"Unity.VisualScripting.GraphGroup"},{"position":{"xMin":-405.0,"yMin":-328.0,"xMax":-159.0,"yMax":-263.0},"title":"","body":"//
         Copyright (c) Microsoft Corporation.\r\n// Licensed under the MIT License.","colorTheme":"Black","guid":"88d538c2-ada6-4cf2-b108-542aa8947720","$type":"Unity.VisualScripting.StickyNote"}],"$version":"A"}}}'
       objectReference: {fileID: 0}
+    - target: {fileID: 2156131280278190004, guid: c58f4d6c732e481478e8d34c4fb610c1,
+        type: 3}
+      propertyPath: version
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2156131280278190004, guid: c58f4d6c732e481478e8d34c4fb610c1,
+        type: 3}
+      propertyPath: equippableSettings.version
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2156131280278190004, guid: c58f4d6c732e481478e8d34c4fb610c1,
+        type: 3}
+      propertyPath: equippableSettings.activateType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2156131280278190004, guid: c58f4d6c732e481478e8d34c4fb610c1,
+        type: 3}
+      propertyPath: equippableSettings.MaxThrowVelocity2D
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2156131280278190004, guid: c58f4d6c732e481478e8d34c4fb610c1,
+        type: 3}
+      propertyPath: equippableSettings.MaxThrowVelocityVR
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2156131280537857369, guid: c58f4d6c732e481478e8d34c4fb610c1,
+        type: 3}
+      propertyPath: version
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2156131280537857369, guid: c58f4d6c732e481478e8d34c4fb610c1,
+        type: 3}
+      propertyPath: equippableSettings.version
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2156131280537857369, guid: c58f4d6c732e481478e8d34c4fb610c1,
+        type: 3}
+      propertyPath: equippableSettings.activateType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2156131280537857369, guid: c58f4d6c732e481478e8d34c4fb610c1,
+        type: 3}
+      propertyPath: equippableSettings.MaxThrowVelocity2D
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2156131280537857369, guid: c58f4d6c732e481478e8d34c4fb610c1,
+        type: 3}
+      propertyPath: equippableSettings.MaxThrowVelocityVR
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3023560140005125739, guid: c58f4d6c732e481478e8d34c4fb610c1,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -12551,6 +12601,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.681
+      objectReference: {fileID: 0}
+    - target: {fileID: 8758295697910307952, guid: c58f4d6c732e481478e8d34c4fb610c1,
+        type: 3}
+      propertyPath: version
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8758295697910307952, guid: c58f4d6c732e481478e8d34c4fb610c1,
+        type: 3}
+      propertyPath: equippableSettings.version
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8758295697910307952, guid: c58f4d6c732e481478e8d34c4fb610c1,
+        type: 3}
+      propertyPath: equippableSettings.activateType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8758295697910307952, guid: c58f4d6c732e481478e8d34c4fb610c1,
+        type: 3}
+      propertyPath: equippableSettings.MaxThrowVelocity2D
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8758295697910307952, guid: c58f4d6c732e481478e8d34c4fb610c1,
+        type: 3}
+      propertyPath: equippableSettings.MaxThrowVelocityVR
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9202930412234373059, guid: c58f4d6c732e481478e8d34c4fb610c1,
         type: 3}
