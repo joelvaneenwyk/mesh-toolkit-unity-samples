@@ -14,6 +14,11 @@ tasks:
     cmds:
       - task: unity-build-all
 
+  pull:
+    cmds:
+      - cmd: git pull --rebase --autostash
+      - task: unity-build-all
+
   prepare-build:
     internal: true
     cmds:
@@ -42,7 +47,7 @@ tasks:
     deps: [prepare-build]
     internal: true
     vars:
-      PROJECT: '{{default "DartRoom" .PROJECT}}'
+      PROJECT: '{{default "Invalid_Project_Name" .PROJECT}}'
     cmds:
       - dotnet UnityBuildRunner -timeout "00:30:00" -quit -batchmode -buildTarget "Win64" -projectPath "{{.USER_WORKING_DIR}}/{{.PROJECT}}" -logfile "{{.OUTPUT_DIRECTORY}}/unity_build_{{.PROJECT}}.log"
     silent: false
