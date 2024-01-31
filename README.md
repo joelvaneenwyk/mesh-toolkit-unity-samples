@@ -1,10 +1,10 @@
 # Mesh Toolkit for Unity
 
-The Mesh Toolkit enables creators and developers to build custom 3D environments and experiences to meet specific business needs: new employee onboarding, training, guided tours, social gatherings, and more.This repo contains sample projects that you can use as a starting point for building your custom 3D experiences.  
+The Mesh Toolkit enables creators and developers to build custom 3D environments and experiences to meet specific business needs: new employee onboarding, training, guided tours, social gatherings, and more.This repo contains sample projects that you can use as a starting point for building your custom 3D experiences.
 
-## Getting started: 
+## Getting started
 
-For detailed instructions on getting started with development for Microsoft Mesh, [visit our documentation at learn.microsoft.com](https://aka.ms/MeshDeveloper). 
+For detailed instructions on getting started with development for Microsoft Mesh, [visit our documentation at learn.microsoft.com](https://aka.ms/MeshDeveloper).
 
 1. [**Mesh 101**](https://aka.ms/Mesh101Tutorial): Start here to learn how to build for Mesh!
 

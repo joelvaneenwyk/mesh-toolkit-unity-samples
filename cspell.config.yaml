@@ -1,0 +1,11 @@
+version: "0.2"
+ignorePaths: []
+dictionaryDefinitions:
+  - name: microsoft-mesh-dictionary
+    path: ./.config/microsoft-mesh-dictionary.txt
+    addWords: true
+dictionaries:
+  - microsoft-mesh-dictionary
+words: []
+ignoreWords: []
+import: []

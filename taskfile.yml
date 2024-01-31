@@ -1,0 +1,111 @@
+# https://taskfile.dev
+
+version: "3"
+
+vars:
+  RM1: '{{if eq .OS "Windows_NT"}}powershell -NoProfile -Command Remove-Item -Recurse -Force {{else}}rm -rf{{end}}'
+  RM: '{{if eq .OS "Windows_NT"}}cmd /d /c rmdir /q /s{{else}}rm -rf{{end}}'
+  OUTPUT_DIRECTORY: "{{.USER_WORKING_DIR}}/.build"
+env:
+  UnityPath: C:\Program Files\Unity\Hub\Editor\2022.3.7f1\Editor\Unity.exe
+
+tasks:
+  default:
+    cmds:
+      - task: unity-build-all
+
+  pull:
+    cmds:
+      - cmd: git pull --rebase --autostash
+      - task: unity-build-all
+
+  prepare-build:
+    internal: true
+    cmds:
+      - task: make-directory
+        vars: { TARGET: "{{.OUTPUT_DIRECTORY}}" }
+    silent: true
+
+  unity-build-all-scenes:
+    deps:
+      [
+        unity-build-dart-room,
+        unity-build-mesh-101,
+        unity-build-physics-effects-gallery,
+        unity-build-science-building,
+        unity-build-toybox,
+      ]
+    internal: true
+    silent: false
+
+  unity-build-all:
+    cmds:
+      - task: kill-unity
+      - task: unity-build-all-scenes
+
+  unity-build:
+    deps: [prepare-build]
+    internal: true
+    vars:
+      PROJECT: '{{default "Invalid_Project_Name" .PROJECT}}'
+    cmds:
+      - dotnet UnityBuildRunner -timeout "00:30:00" -quit -batchmode -buildTarget "Win64" -projectPath "{{.USER_WORKING_DIR}}/{{.PROJECT}}" -logfile "{{.OUTPUT_DIRECTORY}}/unity_build_{{.PROJECT}}.log"
+    silent: false
+
+  unity-build-dart-room:
+    cmds:
+      - task: unity-build
+        vars: { PROJECT: "DartRoom" }
+
+  unity-build-mesh-101:
+    cmds:
+      - task: unity-build
+        vars: { PROJECT: "Mesh101" }
+
+  unity-build-physics-effects-gallery:
+    cmds:
+      - task: unity-build
+        vars: { PROJECT: "PhysicsEffectsGallery" }
+
+  unity-build-science-building:
+    cmds:
+      - task: unity-build
+        vars: { PROJECT: "ScienceBuilding" }
+
+  unity-build-toybox:
+    cmds:
+      - task: unity-build
+        vars: { PROJECT: "Toybox" }
+
+  #
+  # Internal helper tasks
+  #
+
+  kill-process:
+    internal: true
+    vars:
+      TARGET: '{{default "InvalidProcess" .TARGET}}'
+    cmds:
+      - cmd: '{{if eq .OS "Windows_NT"}}powershell -NoProfile -Command Stop-Process -ErrorAction SilentlyContinue -Name "{{.TARGET}}" -Force{{else}}pkill -f "{{.TARGET}}"{{end}}'
+        ignore_error: true
+
+  kill-unity:
+    silent: false
+    internal: true
+    cmds:
+      - task: kill-process
+        vars: { TARGET: "Unity" }
+
+  remove-directory:
+    internal: true
+    vars:
+      TARGET: '{{default ".build" .TARGET}}'
+    cmds:
+      - '{{if eq .OS "Windows_NT"}}cmd /d /c if exist "{{.TARGET}}" rmdir /q /s "{{.TARGET}}"{{else}}rm -rf {{.TARGET}}{{end}}'
+
+  make-directory:
+    internal: true
+    vars:
+      TARGET: '{{default "" .TARGET}}'
+    cmds:
+      - '{{if eq .OS "Windows_NT"}}cmd /d /c if not exist "{{.TARGET}}" mkdir "{{.TARGET}}"{{else}}mkdir -p "{{.TARGET}}"{{end}}'
