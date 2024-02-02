@@ -8,10 +8,10 @@ Toybox is a Unity Engine package that empowers creators to build interactive exp
 ## What's Inside?
 
   1. A sample project called `Toybox`
-  2. A Unity package called `Microsoft Mesh Toolkit Toybox` located in the Toybox\Packages\com.microsoft.mesh.toolkit.toybox folder
+  2. A Unity package called `Microsoft Mesh Toolkit Toybox` located in the `Toybox\Packages\com.microsoft.mesh.toolkit.toybox` folder
 
   The Unity sample project contains five interactive activities that use mixtures of visual scripting, animations, VFX, and SoundFX to drive social engagement across Mesh experiences.
-  
+
 Activities include:
 
 - Bean Bag Toss - two versions :trophy:
@@ -39,7 +39,7 @@ There are a few ways to add Toybox to your project. You an copy and paste the co
 
     ![Package Manager Add](README/PackageManagerAdd.png)
 
-3. Paste *https://github.com/microsoft/Mesh-Toolkit-Unity.git?path=/Toybox/Packages/com.microsoft.mesh.toolkit.toybox* into the text field and click `"Add"`
+3. Paste *<https://github.com/microsoft/Mesh-Toolkit-Unity.git?path=/Toybox/Packages/com.microsoft.mesh.toolkit.toybox>* into the text field and click `"Add"`
 
     ![Package Manager Paste](README/PackageManagerPaste.png)
 
