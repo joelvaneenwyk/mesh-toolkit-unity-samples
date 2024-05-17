@@ -48,9 +48,7 @@
     {
       "name": "Mesh.Toolkit",
       "url": "https://registry.npmjs.org",
-      "scopes": [
-        "com.microsoft"
-      ]
+      "scopes": ["com.microsoft"]
     }
   ]
 }
