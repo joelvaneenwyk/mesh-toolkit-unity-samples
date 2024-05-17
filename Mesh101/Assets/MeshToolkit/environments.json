@@ -1,0 +1,21 @@
+{
+  "uploadEntries": [
+    {
+      "assetId": "",
+      "name": "",
+      "isEnabled": true,
+      "uploadItems": [
+        {
+          "prefabFilepath": "",
+          "buildPlatforms": [
+            "android",
+            "pc"
+          ]
+        }
+      ],
+      "perPlatformAssets": false,
+      "includeThumbnail": false,
+      "thumbnailGenerationBehavior": "Autogenerate"
+    }
+  ]
+}
