@@ -1,0 +1,21 @@
+{
+  "uploadEntries": [
+    {
+      "assetId": "75d66f57-fe42-439d-b4d3-1347edd831df",
+      "name": "sample_dart_room",
+      "isEnabled": true,
+      "uploadItems": [
+        {
+          "prefabFilepath": "Assets/Scenes/DartRoom.unity",
+          "forAndroid": false,
+          "forWin": true
+        }
+      ],
+      "perPlatformAssets": false,
+      "thumbnailImagesFolder": "Assets\\MeshToolkit\\Thumbnails\\75d66f57",
+      "includeThumbnail": false,
+      "thumbnailGenerationBehavior": "Autogenerate",
+      "metaverseId": "964768ac-e85a-4fe2-bfc8-0c8b3347db13"
+    }
+  ]
+}
