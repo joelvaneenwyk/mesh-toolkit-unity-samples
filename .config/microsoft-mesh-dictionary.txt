@@ -1,0 +1,8 @@
+# Custom Dictionary Words
+batchmode
+cmds
+Fishin
+msrc
+OCL's
+pkill
+toybox

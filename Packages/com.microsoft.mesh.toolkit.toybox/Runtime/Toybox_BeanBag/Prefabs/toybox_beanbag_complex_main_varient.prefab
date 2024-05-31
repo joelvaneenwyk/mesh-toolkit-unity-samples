@@ -2148,11 +2148,6 @@ PrefabInstance:
       propertyPath: equippableSettings.version
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 212865839808194254, guid: 157faf12ca3bb3442b6e3141dade4b0f,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 235197911611469246, guid: 157faf12ca3bb3442b6e3141dade4b0f,
         type: 3}
       propertyPath: m_RootOrder

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3702,7 +3702,7 @@ PrefabInstance:
     - target: {fileID: 9128271524594808335, guid: 618e82aa8ef311d4dbbf984185775523,
         type: 3}
       propertyPath: UseMeshAvatars
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9128271524594808335, guid: 618e82aa8ef311d4dbbf984185775523,
         type: 3}
@@ -3805,7 +3805,7 @@ GameObject:
   - component: {fileID: 1928527178}
   - component: {fileID: 1928527177}
   - component: {fileID: 1928527176}
-  m_Layer: 14
+  m_Layer: 0
   m_Name: SolidFloor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7804,7 +7804,7 @@ PrefabInstance:
     - target: {fileID: 5983079218155416033, guid: 010bbb21f2b7f3c4b94006c112b296d2,
         type: 3}
       propertyPath: m_Name
-      value: ExampleGame_CastleSiege
+      value: ExampleGame_AngryBirds
       objectReference: {fileID: 0}
     - target: {fileID: 5983079218155416035, guid: 010bbb21f2b7f3c4b94006c112b296d2,
         type: 3}
@@ -9272,7 +9272,7 @@ PrefabInstance:
     - target: {fileID: 1145319141927539628, guid: da48ed29664b114488360dfe1368d6cd,
         type: 3}
       propertyPath: m_Name
-      value: ExampleGame_BlockTower
+      value: ExampleGame_JengaTower
       objectReference: {fileID: 0}
     - target: {fileID: 5778324949147651754, guid: da48ed29664b114488360dfe1368d6cd,
         type: 3}

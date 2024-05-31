@@ -1,7 +1,11 @@
 {
   "name": "com.microsoft.mesh.toolkit.toybox",
   "displayName": "Microsoft Mesh Toolkit Toybox",
+<<<<<<< HEAD:Toybox/Packages/com.microsoft.mesh.toolkit.toybox/package.json
+  "version": "1.9.0",
+=======
   "version": "0.0.0",
+>>>>>>> develop:Packages/com.microsoft.mesh.toolkit.toybox/package.json
   "description": "Toybox empowers developers and creators to add games and other engaging activities to Mesh experiences.",
   "author": "Microsoft",
   "license": "MIT",

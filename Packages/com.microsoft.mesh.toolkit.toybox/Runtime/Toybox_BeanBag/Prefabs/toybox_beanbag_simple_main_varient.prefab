@@ -1270,11 +1270,6 @@ PrefabInstance:
       propertyPath: uniqueObjectId
       value: 924
       objectReference: {fileID: 0}
-    - target: {fileID: 8766378191561478926, guid: ca13b4ca4924887459b1fde7c0745af7,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8826631226260966822, guid: ca13b4ca4924887459b1fde7c0745af7,
         type: 3}
       propertyPath: uniqueObjectId

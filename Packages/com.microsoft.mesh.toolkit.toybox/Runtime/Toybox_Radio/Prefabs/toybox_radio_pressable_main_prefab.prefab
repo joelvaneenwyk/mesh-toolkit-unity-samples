@@ -101,32 +101,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 213ab9e0311f702458258c8bc09a8395, type: 2}
     - target: {fileID: 6176268924375777457, guid: 5418b078aa7abac43a7627e94176f6f1,
         type: 3}
-      propertyPath: version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6176268924375777457, guid: 5418b078aa7abac43a7627e94176f6f1,
-        type: 3}
-      propertyPath: equippableSettings.version
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6176268924375777457, guid: 5418b078aa7abac43a7627e94176f6f1,
-        type: 3}
-      propertyPath: equippableSettings.activateType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6176268924375777457, guid: 5418b078aa7abac43a7627e94176f6f1,
-        type: 3}
       propertyPath: hoverIKSettings.EnableIkTracking
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6176268924375777457, guid: 5418b078aa7abac43a7627e94176f6f1,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocity2D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6176268924375777457, guid: 5418b078aa7abac43a7627e94176f6f1,
-        type: 3}
-      propertyPath: equippableSettings.MaxThrowVelocityVR
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6176268924375777457, guid: 5418b078aa7abac43a7627e94176f6f1,

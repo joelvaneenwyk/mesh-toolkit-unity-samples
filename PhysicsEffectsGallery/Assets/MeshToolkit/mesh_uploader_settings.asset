@@ -21,6 +21,3 @@ MonoBehaviour:
   useStrictMode: 1
   warnBeforeUpload: 1
   destroyUnsupportedComponentsBeforeUpload: 0
-  customHostedBuild: 
-  allowIncompatibleUnityVersion: 0
-  copyBundlesToLocalDirectory: 0

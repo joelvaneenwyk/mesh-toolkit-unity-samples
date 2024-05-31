@@ -53,7 +53,7 @@ TagManager:
   - RaycastOnly
   - HideFromCamera
   - AudioOccluder
-  - Magnifier
+  - Reserved25
   - Custom26
   - Custom27
   - Custom28
